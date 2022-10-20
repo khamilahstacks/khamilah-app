@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Combo&family=Ms+Madi&display=swap" rel="stylesheet">
+    <title>World Weather</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+</head>
+
+<style>
+    body {
+        margin-top: 50px;
+        font-family: "Combo", cursive;
+        font-family: "Ms Madi", cursive;
+        text-align: center;
+        background: linear-gradient(57.4deg,
+                rgb(249, 206, 183) 4.6%,
+                rgb(234, 174, 202) 26%,
+                rgb(210, 182, 226) 49.1%,
+                rgb(173, 209, 242) 86.5%);
+    }
+
+    .weather-size {
+        font-size: 100px;
+    }
+
+    h1 h2 {
+        font-size: 50px;
+        display: block;
+        text-align: center;
+        padding: 50px;
+        margin-top: 50px;
+    }
+
+    .units {
+        color: black;
+        text-decoration: none;
+    }
+
+    .input-bar {
+        border-radius: 30px;
+        border-color: #dab2d9;
+        border-width: 5px;
+    }
+
+    .card-group {
+        padding: 20px 100px 50px 100px;
+        margin-top: 5px auto;
+    }
+</style>
+
+
+<body>
+    <div class="container"></div>
+    <h1 id="city">Los Angeles 🏙</h1>
+    <span>
+        <h2> <span class="temp" id="temperature"></span>
+            <a class="units" href="#" id="celsius-link">°C|</a>
+            <a class="units" href="#" id="fahrenheit-link">°F</a><span>
+        </h2>
+        <form>
+            <span id="search-form">
+                <input type="text" placeholder="search city" class="input-bar" id="search-input" autocomplete="off"
+                    autofocus="on">
+                <button class="btn btn-outline-secondary" type="submit" id="button-search">
+                    Go⛈🌤
+                </button>
+                <button class="btn btn-outline-secondary" id="button-location">
+                    Current Location
+                </button>
+        </form>
+        <p>
+            5 day weather forcast for Los Angeles, California🌤
+        </p>
+        <h5>
+            Thursday September 22, 07:31,2022
+        </h5>
+        <div class="text-center">
+            <div class="card-group">
+                <div class="card" style="width: 18rem;">
+                    <h3 class="card-title">Monday</h3>
+                    <h4 class="card-title">September 12</h4>
+                    <p class="weather-size"> 🌥</p>
+                    <div class="card-body">
+                        <h4>82°🌞 / 67°🌙</h4>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <h3 class="card-title">Tuesday</h3>
+                    <h4 class="card-title">September 13</h4>
+                    <div class="card-body">
+                        <p class="weather-size"> ☀️</p>
+                        <h4>81°🌞 / 66°🌙</h4>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <h3 class="card-title">Wednesday</h3>
+                    <h4 class="card-title">September 14</h4>
+                    <div class="card-body">
+                        <p class="weather-size">🌤</p>
+                        <h4>79°🌞 / 62°🌙</h4>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <h3 class="card-title">Thursday</h3>
+                    <h4 class="card-title">September 15</h4>
+                    <div class="card-body">
+                        <p class="weather-size"> ☀️</p>
+                        <h4>81°🌞 / 62°🌙</h4>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <h3 class="card-title">Friday</h3>
+                    <h4 class="card-title">September 16</h4>
+                    <div class="card-body">
+                        <p class="weather-size"> ☀️</p>
+                        <h4>82°🌞 / 63°🌙</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script let currentTime=document.querySelector("#current-Time"); let now=new Date(); let
+            h2=document.querySelector("h5"); let date=now.getDate(); let hours=now.getHours(); let
+            minutes=now.getMinutes(); let year=now.getFullYear(); let days=[ "Sunday" , "Monday" , "Tuesday"
+            , "Wednesday" , "Thursday" , "Friday" , "Saturday" ]; let day=days[now.getDay()]; let months=[ "January"
+            , "February" , "March" , "April" , "May" , "June" , "July" , "August" , "September" , "October" , "November"
+            , "December" ]; let month=months[now.getMonth()]; h2.innerHTML=`${day} ${month} ${date},
+            ${hours}:${minutes},${year}`; function showCity(event) { event.preventDefault(); let
+            searchInput=document.querySelector("#search-input"); let city=document.querySelector("#city"); let
+            cityValue=searchInput.value; city.innerHTML=`${cityValue} 🏙`; } let fair=document.querySelector("form");
+            fair.addEventListener("submit", search); function search(event) { event.preventDefault(); let
+            searchInput=document.querySelector("#search-input"); searchCity(searchInput.value); } function
+            searchCity(city) { let unit="metric" ; let apiKey="a2dda52dce059eb8a14e95aaa0db6ab7" ; let
+            apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
+            axios.get(`${apiUrl}&appid=${apiKey}`).then(displayWeatherCondition); } let
+            form=document.querySelector("#search-form"); form.addEventListener("submit", search); function
+            displayWeatherCondition(response) { document.querySelector("#city").innerHTML=response.data.name;
+            document.querySelector("#temperature").innerHTML=Math.round( response.data.main.temp ); } function
+            getPosition(event) { event.preventDefault(); navigator.geolocation.getCurrentPosition(handleGeolocation); }
+            function handleGeolocation(position) { let lat=position.coords.latitude; let lon=position.coords.longitude;
+            let unit="metric" ; let apiKey="a2dda52dce059eb8a14e95aaa0db6ab7" ; let
+            apiUrl=`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${unit}`;
+            axios.get(`${apiUrl}&appid=${apiKey}`).then(displayWeatherCondition); } let
+            buttonLocation=document.querySelector("#button-location"); buttonLocation.addEventListener("click",
+            getPosition); function changeTempFah() { let temperature=document.querySelector(".temp");
+            temperature.innerHTML=`78🌈`; } let fahTemp=document.querySelector("#fahrenheit-link");
+            fahTemp.addEventListener("click", changeTempFah); function changeTempCel() { let
+            temperature=document.querySelector(".temp"); temperature.innerHTML=`❄️28`; } let
+            celTemp=document.querySelector("#celsius-link"); celTemp.addEventListener("click", changeTempCel);
+            src="src/index.js">
+            </script>
+</body>
+
+</html>
