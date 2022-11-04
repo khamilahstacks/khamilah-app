@@ -84,14 +84,14 @@ buttonLocation.addEventListener("click", getPosition);
 
 function changeTempFah() {
   let temperature = document.querySelector(".temp");
-  temperature.innerHTML = `78🌈`;
+  temperature.innerHTML = `78`;
 }
 let fahTemp = document.querySelector("#fahrenheit-link");
 fahTemp.addEventListener("click", changeTempFah);
 
 function changeTempCel() {
   let temperature = document.querySelector(".temp");
-  temperature.innerHTML = `❄️28`;
+  temperature.innerHTML = `28`;
 }
 let celTemp = document.querySelector("#celsius-link");
 celTemp.addEventListener("click", changeTempCel);
