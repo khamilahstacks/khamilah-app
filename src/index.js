@@ -51,7 +51,7 @@ function search(event) {
 function searchCity(city) {
   let unit = "metric";
   let apiKey = "1f50o537ea68ecafef08548ac3977b7t";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon={lon}&lat={lat}&key={key}`;
   axios.get(`${apiUrl}&appid=${apiKey}`).then(displayWeatherCondition);
 }
 
@@ -75,7 +75,7 @@ function handleGeolocation(position) {
   let lon = position.coords.longitude;
   let unit = "metric";
   let apiKey = "1f50o537ea68ecafef08548ac3977b7t";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${unit}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon={lon}&lat={lat}&key={key}`;
   axios.get(`${apiUrl}&appid=${apiKey}`).then(displayWeatherCondition);
 }
 
