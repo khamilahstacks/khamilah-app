@@ -38,3 +38,16 @@ h1 h2 {
     padding: 20px 100px 50px 100px;
     margin-top: 5px auto;
 }
+
+li {
+    list-style: none;
+    margin: none;
+    padding: none;
+
+}
+
+ul {
+    list-style: none;
+    margin: none;
+    padding: none;
+}
