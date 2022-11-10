@@ -39,8 +39,6 @@ function showCity(event) {
   let cityValue = searchInput.value;
   city.innerHTML = `${cityValue} 🏙`;
 }
-let fair = document.querySelector("form");
-fair.addEventListener("submit", search);
 
 function search(event) {
   event.preventDefault();
