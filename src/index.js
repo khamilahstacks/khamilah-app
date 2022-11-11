@@ -32,13 +32,6 @@ let months = [
 let month = months[now.getMonth()];
 h2.innerHTML = `${day} ${month} ${date}, ${hours}:${minutes},${year}`;
 
-function showCity(event) {
-  event.preventDefault();
-  let searchInput = document.querySelector("#search-input");
-  let city = document.querySelector("#city");
-  let cityValue = searchInput.value;
-  city.innerHTML = `${cityValue} 🏙`;
-}
 
 function search(event) {
   event.preventDefault();
