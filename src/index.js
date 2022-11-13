@@ -60,7 +60,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
   document.querySelector("#icon").innerHTML=response.data.description;
-  icon.setAttribute("src" ,`https://ssl.gstatic.com/onebox/weather/${response.data.weather[0].icon}.png`
+  icon.setAttribute("src" ,`http://openweathermap.org/img/wn/$%7Bresponse.data.weather[0].icon%7D@2x.png`
   );
   icon.setAttribute("alt", response.data.weather[0].description);
 }
