@@ -62,7 +62,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#icon").innerHTML=response.data.description;
   icon.setAttribute("src" ,`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  changeTempCel=response.data.main.temp;
+  tempCels=response.data.main.temp;
   
 }
 
@@ -86,27 +86,28 @@ buttonLocation.addEventListener("click", getPosition);
 
 function changeTempFah(event) {
   let temperature = document.querySelector(".temp");
-  celsius-link.classlist.remove("active");
-fahrenheit-link.add("active");
-  changeTempFah=(temperature.innerHTML*9)/5+32;
-  temperature=math.round(changeTempFah);
+  const celsiusLink = document.querySelector("#celsius-link");
+  const fahrenheitLink = document.querySelector("#fahrenheit-link");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let changeTemp =(temperature.innerHTML*9)/5+32;
+  temperature.innerHTML=Math.round(changeTemp);
 }
 
 
 function changeTempCel(event){
   let temperature=document.querySelector(".temp");
-  celsius-link.classlist.add("active");
-fahrenheit-link.remove("active");
-  temperature.innerHTML=math.round(changeTempCel);
+  const celsiusLink = document.querySelector("#celsius-link");
+  const fahrenheitLink = document.querySelector("#fahrenheit-link");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  temperature.innerHTML=Math.round(tempCels);
 }
-let changeTempCel=null;
 
 let fahTemp = document.querySelector("#fahrenheit-link");
 fahTemp.addEventListener("click", changeTempFah);
 
-function changeTempCel() {
-  let temperature = document.querySelector(".temp");
-  temperature.innerHTML = ``;
-}
 let celTemp = document.querySelector("#celsius-link");
 celTemp.addEventListener("click", changeTempCel);
+
+let tempCels = 0;
