@@ -86,6 +86,8 @@ buttonLocation.addEventListener("click", getPosition);
 
 function changeTempFah(event) {
   let temperature = document.querySelector(".temp");
+  celsius-link.classlist.remove("active");
+fahrenheit-link.add("active");
   changeTempFah=(temperature.innerHTML*9)/5+32;
   temperature=math.round(changeTempFah);
 }
@@ -93,6 +95,8 @@ function changeTempFah(event) {
 
 function changeTempCel(event){
   let temperature=document.querySelector(".temp");
+  celsius-link.classlist.add("active");
+fahrenheit-link.remove("active");
   temperature.innerHTML=math.round(changeTempCel);
 }
 
