@@ -99,6 +99,7 @@ function changeTempCel(event){
 fahrenheit-link.remove("active");
   temperature.innerHTML=math.round(changeTempCel);
 }
+let changeTempCel=null;
 
 let fahTemp = document.querySelector("#fahrenheit-link");
 fahTemp.addEventListener("click", changeTempFah);
