@@ -62,6 +62,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#icon").innerHTML=response.data.description;
   icon.setAttribute("src" ,`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  changeTempCel=response.data.main.temp;
   
 }
 
@@ -82,16 +83,25 @@ function handleGeolocation(position) {
 let buttonLocation = document.querySelector("#button-location");
 buttonLocation.addEventListener("click", getPosition);
 
-function changeTempFah() {
+
+function changeTempFah(event) {
   let temperature = document.querySelector(".temp");
-  temperature.innerHTML = `78`;
+  changeTempFah=(temperature.innerHTML*9)/5+32;
+  temperature=math.round(changeTempFah);
 }
+
+
+function changeTempCel(event){
+  let temperature=document.querySelector(".temp");
+  temperature.innerHTML=math.round(changeTempCel);
+}
+
 let fahTemp = document.querySelector("#fahrenheit-link");
 fahTemp.addEventListener("click", changeTempFah);
 
 function changeTempCel() {
   let temperature = document.querySelector(".temp");
-  temperature.innerHTML = `28`;
+  temperature.innerHTML = ``;
 }
 let celTemp = document.querySelector("#celsius-link");
 celTemp.addEventListener("click", changeTempCel);
