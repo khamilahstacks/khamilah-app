@@ -52,58 +52,6 @@ form.addEventListener("submit", search);
 
 
 
-function displayForcast (){
-let forcast= document.querySelector("#forcast");
-
-
-let forcastHTML=`<div class="text-center" id="forcast">
-            <div class="card-group">
-                <div class="card" style="width: 18rem">
-                    <h3 class="card-title">Monday</h3>
-                    <h4 class="card-title"></h4>
-                    <p class="weather-size">🌥</p>
-                    <div class="card-body">
-                        <h4>82°🌞 / 67°🌙</h4>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem">
-                    <h3 class="card-title">Tuesday</h3>
-                    <h4 class="card-title"></h4>
-                    <div class="card-body">
-                        <p class="weather-size">☀️</p>
-                        <h4>81°🌞 / 66°🌙</h4>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem">
-                    <h3 class="card-title">Wednesday</h3>
-                    <h4 class="card-title"></h4>
-                    <div class="card-body">
-                        <p class="weather-size">🌤</p>
-                        <h4>79°🌞 / 62°🌙</h4>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem">
-                    <h3 class="card-title">Thursday</h3>
-                    <h4 class="card-title"></h4>
-                    <div class="card-body">
-                        <p class="weather-size">☀️</p>
-                        <h4>81°🌞 / 62°🌙</h4>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem">
-                    <h3 class="card-title">Friday</h3>
-                    <h4 class="card-title"></h4>
-                    <div class="card-body">
-                        <p class="weather-size">☀️</p>
-                        <h4>82°🌞 / 63°🌙</h4>
-                    </div>
-                </div>
-            </div>`;
-            
-      forcast.innerHTML=forcastHTML;
-}
-
-displayForcast();
 
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -166,3 +114,5 @@ let celTemp = document.querySelector("#celsius-link");
 celTemp.addEventListener("click", changeTempCel);
 
 let tempCels = 0;
+
+
