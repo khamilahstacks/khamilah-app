@@ -57,6 +57,8 @@ let forcast= document.querySelector("#forcast");
 forcast.innerHTML="forcast";
 }
 
+displayForcast();
+
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
