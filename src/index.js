@@ -50,6 +50,13 @@ function searchCity(city) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
+
+
+function displayForcast (){
+let forcast= document.querySelector("#forcast");
+forcast.innerHTML="forcast";
+}
+
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
