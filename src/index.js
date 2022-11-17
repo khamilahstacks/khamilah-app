@@ -99,6 +99,8 @@ let forcastHTML=`<div class="text-center" id="forcast">
                     </div>
                 </div>
             </div>`;
+            
+      forcast.innerHTML=forcastHTML;
 }
 
 displayForcast();
