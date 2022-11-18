@@ -113,11 +113,12 @@ function displayForcast() {
                     rel="noopener noreferrer">hosted by Netlify</a>.
             </small>
         </footer>
-    </div>`
+    </div>`;
   }
-  )
+  );
 }
-
+forcastHTML=forcastHTML+`<div>`;
+forcastElement.innerHTML= forcastHTML;
 
 
 
