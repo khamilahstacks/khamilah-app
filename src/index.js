@@ -51,6 +51,74 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
 
+function displayForcast() {
+  let forcastElement=document.querySelector("#forcast");
+  let forcastHTML=`<div class="row>`;
+  let days=["Thursday", "Friday", "Saturday", "Sunday"];
+  days.forEach (function  (day) {
+    forcastHTML= forcastHTML + ` <div class="text-center" id="forcast">
+            <div class="card-group">
+                <div class="card" style="width: 18rem">
+                    <h3 class="card-title">Monday</h3>
+                    <h4 class="card-title"></h4>
+                    <p class="weather-size">🌥</p>
+                    <div class="card-body">
+                        <h4>82°🌞 / 67°🌙</h4>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem">
+                    <h3 class="card-title">Tuesday</h3>
+                    <h4 class="card-title"></h4>
+                    <div class="card-body">
+                        <p class="weather-size">☀️</p>
+                        <h4>81°🌞 / 66°🌙</h4>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem">
+                    <h3 class="card-title">Wednesday</h3>
+                    <h4 class="card-title"></h4>
+                    <div class="card-body">
+                        <p class="weather-size">🌤</p>
+                        <h4>79°🌞 / 62°🌙</h4>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem">
+                    <h3 class="card-title">Thursday</h3>
+                    <h4 class="card-title"></h4>
+                    <div class="card-body">
+                        <p class="weather-size">☀️</p>
+                        <h4>81°🌞 / 62°🌙</h4>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem">
+                    <h3 class="card-title">Friday</h3>
+                    <h4 class="card-title"></h4>
+                    <div class="card-body">
+                        <p class="weather-size">☀️</p>
+                        <h4>82°🌞 / 63°🌙</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <small>
+                This Project was coded by<a href="https://www.shecodes.io/graduates/52145-khamilah-prevost"
+                    target="_blank" rel="noopener noreferrer">
+                    Khamilah Prevost</a>
+                and is
+                <a href="https://github.com/khamilahstacks/khamilah-app.git" target="_blank"
+                    rel="noopener noreferrer">open sourced on GitHub</a>
+                and
+                <a href="https://splendorous-pavlova-339d2c.netlify.app" target="_blank"
+                    rel="noopener noreferrer">hosted by Netlify</a>.
+            </small>
+        </footer>
+    </div>`
+  }
+  )
+}
+
+
 
 
 function displayWeatherCondition(response) {
@@ -115,4 +183,4 @@ celTemp.addEventListener("click", changeTempCel);
 
 let tempCels = 0;
 
-
+displayForcast();
