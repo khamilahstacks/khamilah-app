@@ -120,7 +120,12 @@ function displayForcast() {
 forcastHTML=forcastHTML+`<div>`;
 forcastElement.innerHTML= forcastHTML;
 
-
+function getForcast(coordinates){
+  console.log(coordinates);
+  let  apiKey="2dda52dce059eb8a14e95aaa0db6ab7";
+  let apiUrl=`https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid={API key}&units=metric`;
+  axios.get(apiUrl).then(displayForcast);
+}
 
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -136,6 +141,7 @@ function displayWeatherCondition(response) {
   );
   tempCels=response.data.main.temp;
   
+  getForcast(response.data.coord);
 }
 
 function getPosition(event) {
