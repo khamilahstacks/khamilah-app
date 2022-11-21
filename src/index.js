@@ -52,11 +52,39 @@ form.addEventListener("submit", search);
 
 
 function displayForcast() {
+  let forcast=responsed.data.daily;
   let forcastElement=document.querySelector("#forcast");
   let forcastHTML=`<div class="row>`;
   let days=["Thursday", "Friday", "Saturday", "Sunday"];
-  days.forEach (function  (day) {
-    forcastHTML= forcastHTML + ` <div class="text-center" id="forcast">
+  days.forEach (function  (forcastDay) {
+    forcastHTML= forcastHTML + ` <div class="container">
+        <h1 id="city">Los Angeles 🏙</h1>
+        <h2>
+            <img id="icon" src="">
+            <span class="temp" id="temperature"></span>
+            <a class="units" href="#" id="celsius-link" class="active">°C|</a>
+            <a class="units" href="#" id="fahrenheit-link">°F</a>
+        </h2>
+        <form id="search-form">
+            <input type="text" placeholder="search city" class="input-bar" id="search-input" autocomplete="off"
+                autofocus="on" />
+            <button class="btn btn-outline-secondary" type="submit" id="button-search">
+                Go⛈🌤
+            </button>
+            <button class="btn btn-outline-secondary" id="button-location">
+                Current Location
+            </button>
+        </form>
+        <ul>
+            <li>Humidity: <span id="humidity"></span>%</li>
+            <li>Wind: <span id="wind"></span> m/h</li>
+
+        </ul>
+        <h5>Thursday September 22, 07:31,2022</h5>
+        <ul>
+            <li id="description">Partly Sunny</li>
+        </ul>
+        <div class="text-center" id="forcast">
             <div class="card-group">
                 <div class="card" style="width: 18rem">
                     <h3 class="card-title">Monday</h3>
