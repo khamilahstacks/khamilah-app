@@ -57,10 +57,12 @@ function displayForcast() {
   let forcastHTML=`<div class="row>`;
   let days=["Thursday", "Friday", "Saturday", "Sunday"];
   days.forEach (function  (forcastDay) {
-    forcastHTML= forcastHTML + ` <div class="container">
+    forcastHTML= forcastHTML + 
+    
+    ` <div class="container">
         <h1 id="city">Los Angeles 🏙</h1>
         <h2>
-            <img id="icon" src="">
+            <img id="icon" src="http://openweathermap.org/img/wn/${forcastDay.weather[0].icon}@2x.png">
             <span class="temp" id="temperature"></span>
             <a class="units" href="#" id="celsius-link" class="active">°C|</a>
             <a class="units" href="#" id="fahrenheit-link">°F</a>
@@ -84,14 +86,14 @@ function displayForcast() {
         <ul>
             <li id="description">Partly Sunny</li>
         </ul>
-        <div class="text-center" id="forcast">
+        <div class="text-center"${forcastDay.dt} id="forcast">
             <div class="card-group">
                 <div class="card" style="width: 18rem">
                     <h3 class="card-title">Monday</h3>
                     <h4 class="card-title"></h4>
                     <p class="weather-size">🌥</p>
                     <div class="card-body">
-                        <h4>82° / 67°</h4>
+                        <h4>${forcastDay.temp.max}° / ${forcastDay.temp.min}°</h4>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem">
@@ -99,7 +101,7 @@ function displayForcast() {
                     <h4 class="card-title"></h4>
                     <div class="card-body">
                         <p class="weather-size">☀️</p>
-                        <h4>81° / 66°</h4>
+                        <h4>${forcastDay.temp.max}° / ${forcastDay.temp.min}°</h4>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem">
@@ -107,7 +109,7 @@ function displayForcast() {
                     <h4 class="card-title"></h4>
                     <div class="card-body">
                         <p class="weather-size">🌤</p>
-                        <h4>79° / 62°</h4>
+                        <h4>${forcastDay.temp.max}° / ${forcastDay.temp.min}°</h4>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem">
@@ -115,7 +117,7 @@ function displayForcast() {
                     <h4 class="card-title"></h4>
                     <div class="card-body">
                         <p class="weather-size">☀️</p>
-                        <h4>81° / 62°</h4>
+                        <h4>${forcastDay.temp.max}° / ${forcastDay.temp.min}°</h4>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem">
@@ -123,7 +125,7 @@ function displayForcast() {
                     <h4 class="card-title"></h4>
                     <div class="card-body">
                         <p class="weather-size">☀️</p>
-                        <h4>82° / 63°</h4>
+                        <h4>${forcastDay.temp.max}° / ${forcastDay.temp.min}°</h4>
                     </div>
                 </div>
             </div>
