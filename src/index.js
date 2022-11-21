@@ -63,7 +63,7 @@ function displayForcast() {
                     <h4 class="card-title"></h4>
                     <p class="weather-size">🌥</p>
                     <div class="card-body">
-                        <h4>82°🌞 / 67°🌙</h4>
+                        <h4>82° / 67°</h4>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem">
@@ -71,7 +71,7 @@ function displayForcast() {
                     <h4 class="card-title"></h4>
                     <div class="card-body">
                         <p class="weather-size">☀️</p>
-                        <h4>81°🌞 / 66°🌙</h4>
+                        <h4>81° / 66°</h4>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem">
@@ -79,7 +79,7 @@ function displayForcast() {
                     <h4 class="card-title"></h4>
                     <div class="card-body">
                         <p class="weather-size">🌤</p>
-                        <h4>79°🌞 / 62°🌙</h4>
+                        <h4>79° / 62°</h4>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem">
@@ -87,7 +87,7 @@ function displayForcast() {
                     <h4 class="card-title"></h4>
                     <div class="card-body">
                         <p class="weather-size">☀️</p>
-                        <h4>81°🌞 / 62°🌙</h4>
+                        <h4>81° / 62°</h4>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem">
@@ -95,7 +95,7 @@ function displayForcast() {
                     <h4 class="card-title"></h4>
                     <div class="card-body">
                         <p class="weather-size">☀️</p>
-                        <h4>82°🌞 / 63°🌙</h4>
+                        <h4>82° / 63°</h4>
                     </div>
                 </div>
             </div>
