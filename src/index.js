@@ -51,18 +51,18 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
 
-function displayForcast(responsed) {
-  let forcast = responsed.data.daily;
-  let forcastElement=document.querySelector("#forcast");
-  let forcastHTML=`<div class="row>`;
+function displayForecast(responsed) {
+  let forecast = responsed.data.daily;
+  let forecastElement=document.querySelector("#forecast");
+  let forecastHTML=`<div class="row>`;
   let days=["Thursday", "Friday", "Saturday", "Sunday"];
-  days.forEach (function  (forcastDay) {
-    forcastHTML= forcastHTML + 
+  days.forEach (function  (forecastDay) {
+    forecastHTML= forecastHTML + 
     
     ` <div class="container">
         <h1 id="city">Los Angeles 🏙</h1>
         <h2>
-            <img id="icon" src="http://openweathermap.org/img/wn/${forcastDay.weather[0].icon}@2x.png">
+            <img id="icon" src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png">
             <span class="temp" id="temperature"></span>
             <a class="units" href="#" id="celsius-link" class="active">°C|</a>
             <a class="units" href="#" id="fahrenheit-link">°F</a>
@@ -86,14 +86,14 @@ function displayForcast(responsed) {
         <ul>
             <li id="description">Partly Sunny</li>
         </ul>
-        <div class="text-center"${forcastDay.dt} id="forcast">
+        <div class="text-center"${forecastDay.dt} id="forecast">
             <div class="card-group">
                 <div class="card" style="width: 18rem">
                     <h3 class="card-title">Monday</h3>
                     <h4 class="card-title"></h4>
                     <p class="weather-size">🌥</p>
                     <div class="card-body">
-                        <h4>${forcastDay.temp.max}° / ${forcastDay.temp.min}°</h4>
+                        <h4>${forecastDay.temp.max}° / ${forecastDay.temp.min}°</h4>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem">
@@ -101,7 +101,7 @@ function displayForcast(responsed) {
                     <h4 class="card-title"></h4>
                     <div class="card-body">
                         <p class="weather-size">☀️</p>
-                        <h4>${forcastDay.temp.max}° / ${forcastDay.temp.min}°</h4>
+                        <h4>${forecastDay.temp.max}° / ${forecastDay.temp.min}°</h4>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem">
@@ -109,7 +109,7 @@ function displayForcast(responsed) {
                     <h4 class="card-title"></h4>
                     <div class="card-body">
                         <p class="weather-size">🌤</p>
-                        <h4>${forcastDay.temp.max}° / ${forcastDay.temp.min}°</h4>
+                        <h4>${forecastDay.temp.max}° / ${forecastDay.temp.min}°</h4>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem">
@@ -117,7 +117,7 @@ function displayForcast(responsed) {
                     <h4 class="card-title"></h4>
                     <div class="card-body">
                         <p class="weather-size">☀️</p>
-                        <h4>${forcastDay.temp.max}° / ${forcastDay.temp.min}°</h4>
+                        <h4>${forecastDay.temp.max}° / ${forecastDay.temp.min}°</h4>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem">
@@ -125,7 +125,7 @@ function displayForcast(responsed) {
                     <h4 class="card-title"></h4>
                     <div class="card-body">
                         <p class="weather-size">☀️</p>
-                        <h4>${forcastDay.temp.max}° / ${forcastDay.temp.min}°</h4>
+                        <h4>${forecastDay.temp.max}° / ${forecastDay.temp.min}°</h4>
                     </div>
                 </div>
             </div>
@@ -146,16 +146,16 @@ function displayForcast(responsed) {
     </div>`;
   }
   );
-  forcastHTML=forcastHTML+`<div>`;
-forcastElement.innerHTML= forcastHTML;
+  forecastHTML=forecastHTML+`<div>`;
+forecastElement.innerHTML= forecastHTML;
 }
 
 
-function getForcast(coordinates) {
+function getForecast(coordinates) {
   let apiKey = "311f1f45fee82242ab4086372ab360f5";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayForcast);
-  getForcast(response.data.coord);
+  axios.get(apiUrl).then(displayForecast);
+  getForecast(response.data.coord);
 }
 
 function displayWeatherCondition(response) {
