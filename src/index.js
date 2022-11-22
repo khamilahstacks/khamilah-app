@@ -169,8 +169,6 @@ function displayWeatherCondition(response) {
   icon.setAttribute("src" ,`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   tempCels=response.data.main.temp;
-  
-  getForcast(response.data.coord);
 }
 
 function getPosition(event) {
