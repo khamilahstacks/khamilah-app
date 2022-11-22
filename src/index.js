@@ -51,8 +51,8 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
 
-function displayForcast() {
-  let forcast=responsed.data.daily;
+function displayForcast(responsed) {
+  let forcast = responsed.data.daily;
   let forcastElement=document.querySelector("#forcast");
   let forcastHTML=`<div class="row>`;
   let days=["Thursday", "Friday", "Saturday", "Sunday"];
@@ -150,10 +150,9 @@ function displayForcast() {
 forcastHTML=forcastHTML+`<div>`;
 forcastElement.innerHTML= forcastHTML;
 
-function getForcast(coordinates){
-  console.log(coordinates);
-  let  apiKey="2dda52dce059eb8a14e95aaa0db6ab7";
-  let apiUrl=`https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid={APIkey}&units=metric`;
+function getForcast(coordinates) {
+  let apiKey = "311f1f45fee82242ab4086372ab360f5";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForcast);
 }
 
@@ -220,4 +219,3 @@ celTemp.addEventListener("click", changeTempCel);
 
 let tempCels = 0;
 
-displayForcast();
