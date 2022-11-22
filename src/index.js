@@ -146,9 +146,10 @@ function displayForcast(responsed) {
     </div>`;
   }
   );
-}
-forcastHTML=forcastHTML+`<div>`;
+  forcastHTML=forcastHTML+`<div>`;
 forcastElement.innerHTML= forcastHTML;
+}
+
 
 function getForcast(coordinates) {
   let apiKey = "311f1f45fee82242ab4086372ab360f5";
