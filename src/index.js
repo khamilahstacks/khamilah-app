@@ -60,32 +60,8 @@ function displayForecast(responsed) {
     forecastHTML= forecastHTML + 
     
     ` <div class="container">
-        <h1 id="city">Los Angeles 🏙</h1>
-        <h2>
             <img id="icon" src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png">
             <span class="temp" id="temperature"></span>
-            <a class="units" href="#" id="celsius-link" class="active">°C|</a>
-            <a class="units" href="#" id="fahrenheit-link">°F</a>
-        </h2>
-        <form id="search-form">
-            <input type="text" placeholder="search city" class="input-bar" id="search-input" autocomplete="off"
-                autofocus="on" />
-            <button class="btn btn-outline-secondary" type="submit" id="button-search">
-                Go⛈🌤
-            </button>
-            <button class="btn btn-outline-secondary" id="button-location">
-                Current Location
-            </button>
-        </form>
-        <ul>
-            <li>Humidity: <span id="humidity"></span>%</li>
-            <li>Wind: <span id="wind"></span> m/h</li>
-
-        </ul>
-        <h5>Thursday September 22, 07:31,2022</h5>
-        <ul>
-            <li id="description">Partly Sunny</li>
-        </ul>
         <div class="text-center"${forecastDay} id="forecast">
             <div class="card-group">
                 <div class="card" style="width: 18rem">
