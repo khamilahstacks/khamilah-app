@@ -56,7 +56,7 @@ function displayForecast(responsed) {
   let forecastElement=document.querySelector("#forecast");
   let forecastHTML=`<div class="row>`;
   let days=["Thursday", "Friday", "Saturday", "Sunday"];
-  days.forEach (function  (forecastDay) {
+  forecast.forEach(function (forecastDay) {
     forecastHTML= forecastHTML + 
     
     ` <div class="container">
@@ -155,7 +155,6 @@ function getForecast(coordinates) {
   let apiKey = "311f1f45fee82242ab4086372ab360f5";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
-  getForecast(response.data.coord);
 }
 
 function displayWeatherCondition(response) {
@@ -171,6 +170,7 @@ function displayWeatherCondition(response) {
   icon.setAttribute("src" ,`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   tempCels=response.data.main.temp;
+  getForecast(response.data.coord);
 }
 
 function getPosition(event) {
