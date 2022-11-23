@@ -105,20 +105,6 @@ function displayForecast(responsed) {
                     </div>
                 </div>
             </div>
-        </div>
-        <footer>
-            <small>
-                This Project was coded by<a href="https://www.shecodes.io/graduates/52145-khamilah-prevost"
-                    target="_blank" rel="noopener noreferrer">
-                    Khamilah Prevost</a>
-                and is
-                <a href="https://github.com/khamilahstacks/khamilah-app.git" target="_blank"
-                    rel="noopener noreferrer">open sourced on GitHub</a>
-                and
-                <a href="https://splendorous-pavlova-339d2c.netlify.app" target="_blank"
-                    rel="noopener noreferrer">hosted by Netlify</a>.
-            </small>
-        </footer>
     </div>`;
   }
   );
