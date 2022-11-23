@@ -57,7 +57,7 @@ function displayForecast(responsed) {
   let forecastHTML=`<div class="row>`;
   let days=["Monday", "Tuesday", "Wednesday", "Thursday","Friday"];
   forecast.forEach(function (forecastDay, index){
-    if (index<6) 
+    if (index<1) 
 
     forecastHTML= forecastHTML + 
     
@@ -70,7 +70,8 @@ function displayForecast(responsed) {
                     <p class="weather-size"></p>
                     <div class="card-body">
                         <h4>${Math.round(forecastDay.temp.max)}° / ${Math.round(forecastDay.temp.min)}°</h4>
-                        </div>
+                    </div>
+                </div>
                 <div class="card" style="width: 18rem">
                     <h3 class="card-title">Tuesday</h3>
                     <h4 class="card-title"></h4>
@@ -104,9 +105,7 @@ function displayForecast(responsed) {
                     </div>
                 </div>
             </div>
-
-                    </div>           
-                     </div>`;
+    </div>`;
   }
   );
   forecastHTML=forecastHTML+`<div>`;
