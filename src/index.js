@@ -60,12 +60,12 @@ function displayForecast(responsed) {
     forecastHTML= forecastHTML + 
     
     ` <div class="container">
-        <div class="text-center"${forecastDay} id="forecast" src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png">
+        <div class="text-center"${forecastDay} id="forecast">
             <div class="card-group">
                 <div class="card" style="width: 18rem">
                     <h3 class="card-title">Monday</h3>
                     <h4 class="card-title"></h4>
-                    <p class="weather-size"></p>
+                    <p class="weather-size"> <img="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"></p>
                     <div class="card-body">
                         <h4>${Math.round(forecastDay.temp.max)}° / ${Math.round(forecastDay.temp.min)}°</h4>
                     </div>
