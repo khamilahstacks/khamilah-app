@@ -86,7 +86,7 @@ function displayForecast(responsed) {
         <ul>
             <li id="description">Partly Sunny</li>
         </ul>
-        <div class="text-center"${forecastDay.dt} id="forecast">
+        <div class="text-center"${forecastDay} id="forecast">
             <div class="card-group">
                 <div class="card" style="width: 18rem">
                     <h3 class="card-title">Monday</h3>
