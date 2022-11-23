@@ -70,42 +70,8 @@ function displayForecast(responsed) {
                     <p class="weather-size"></p>
                     <div class="card-body">
                         <h4>${Math.round(forecastDay.temp.max)}° / ${Math.round(forecastDay.temp.min)}°</h4>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem">
-                    <h3 class="card-title">Tuesday</h3>
-                    <h4 class="card-title"></h4>
-                    <div class="card-body">
-                        <p class="weather-size"></p>
-                        <h4>${Math.round(forecastDay.temp.max)}° / ${Math.round(forecastDay.temp.min)}°</h4>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem">
-                    <h3 class="card-title">Wednesday</h3>
-                    <h4 class="card-title"></h4>
-                    <div class="card-body">
-                        <p class="weather-size"></p>
-                        <h4>${Math.round(forecastDay.temp.max)}° / ${Math.round(forecastDay.temp.min)}°</h4>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem">
-                    <h3 class="card-title">Thursday</h3>
-                    <h4 class="card-title"></h4>
-                    <div class="card-body">
-                        <p class="weather-size"></p>
-                        <h4>${Math.round(forecastDay.temp.max)}° / ${Math.round(forecastDay.temp.min)}°</h4>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem">
-                    <h3 class="card-title">Friday</h3>
-                    <h4 class="card-title"></h4>
-                    <div class="card-body">
-                        <p class="weather-size"></p>
-                        <h4>${Math.round(forecastDay.temp.max)}° / ${Math.round(forecastDay.temp.min)}°</h4>
-                    </div>
-                </div>
-            </div>
-    </div>`;
+                    </div>           
+                     </div>`;
   }
   );
   forecastHTML=forecastHTML+`<div>`;
