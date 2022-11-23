@@ -60,16 +60,14 @@ function displayForecast(responsed) {
     forecastHTML= forecastHTML + 
     
     ` <div class="container">
-            <img id="icon" src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png">
-            <span class="temp" id="temperature"></span>
-        <div class="text-center"${forecastDay} id="forecast">
+        <div class="text-center"${forecastDay} id="forecast" src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png">
             <div class="card-group">
                 <div class="card" style="width: 18rem">
                     <h3 class="card-title">Monday</h3>
                     <h4 class="card-title"></h4>
                     <p class="weather-size"></p>
                     <div class="card-body">
-                        <h4>${forecastDay.temp.max}° / ${forecastDay.temp.min}°</h4>
+                        <h4>${Math.round(forecastDay.temp.max)}° / ${Math.round(forecastDay.temp.min)}°</h4>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem">
@@ -77,7 +75,7 @@ function displayForecast(responsed) {
                     <h4 class="card-title"></h4>
                     <div class="card-body">
                         <p class="weather-size"></p>
-                        <h4>${forecastDay.temp.max}° / ${forecastDay.temp.min}°</h4>
+                        <h4>${Math.round(forecastDay.temp.max)}° / ${Math.round(forecastDay.temp.min)}°</h4>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem">
@@ -85,7 +83,7 @@ function displayForecast(responsed) {
                     <h4 class="card-title"></h4>
                     <div class="card-body">
                         <p class="weather-size"></p>
-                        <h4>${forecastDay.temp.max}° / ${forecastDay.temp.min}°</h4>
+                        <h4>${Math.round(forecastDay.temp.max)}° / ${Math.round(forecastDay.temp.min)}°</h4>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem">
@@ -93,7 +91,7 @@ function displayForecast(responsed) {
                     <h4 class="card-title"></h4>
                     <div class="card-body">
                         <p class="weather-size"></p>
-                        <h4>${forecastDay.temp.max}° / ${forecastDay.temp.min}°</h4>
+                        <h4>${Math.round(forecastDay.temp.max)}° / ${Math.round(forecastDay.temp.min)}°</h4>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem">
@@ -101,7 +99,7 @@ function displayForecast(responsed) {
                     <h4 class="card-title"></h4>
                     <div class="card-body">
                         <p class="weather-size"></p>
-                        <h4>${forecastDay.temp.max}° / ${forecastDay.temp.min}°</h4>
+                        <h4>${Math.round(forecastDay.temp.max)}° / ${Math.round(forecastDay.temp.min)}°</h4>
                     </div>
                 </div>
             </div>
