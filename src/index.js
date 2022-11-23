@@ -55,7 +55,7 @@ function displayForecast(responsed) {
   let forecast = responsed.data.daily;
   let forecastElement=document.querySelector("#forecast");
   let forecastHTML=`<div class="row>`;
-  let days=["Thursday", "Friday", "Saturday", "Sunday"];
+  let days=["Monday", "Tuesday", "Wednesday", "Thursday","Friday"];
   forecast.forEach(function (forecastDay, index){
     if (index<6) 
 
