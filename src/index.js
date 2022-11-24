@@ -76,7 +76,7 @@ function displayForecast(responsed) {
                     <h3 class="card-title">Tuesday</h3>
                     <h4 class="card-title"></h4>
                     <div class="card-body">
-                        <p class="weather-size">🌦</p>
+                        <p class="weather-size"><img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"></p>
                         <h4>${Math.round(forecastDay.temp.max)}° / ${Math.round(forecastDay.temp.min)}°</h4>
                     </div>
                 </div>
@@ -84,7 +84,7 @@ function displayForecast(responsed) {
                     <h3 class="card-title">Wednesday</h3>
                     <h4 class="card-title"></h4>
                     <div class="card-body">
-                        <p class="weather-size">🌧</p>
+                        <p class="weather-size"><img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"></p>
                         <h4>${Math.round(forecastDay.temp.max)}° / ${Math.round(forecastDay.temp.min)}°</h4>
                     </div>
                 </div>
@@ -92,7 +92,7 @@ function displayForecast(responsed) {
                     <h3 class="card-title">Thursday</h3>
                     <h4 class="card-title"></h4>
                     <div class="card-body">
-                        <p class="weather-size">🌤</p>
+                        <p class="weather-size"><img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"></p>
                         <h4>${Math.round(forecastDay.temp.max)}° / ${Math.round(forecastDay.temp.min)}°</h4>
                     </div>
                 </div>
@@ -100,7 +100,7 @@ function displayForecast(responsed) {
                     <h3 class="card-title">Friday</h3>
                     <h4 class="card-title"></h4>
                     <div class="card-body">
-                        <p class="weather-size">🌦</p>
+                        <p class="weather-size"><img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"></p>
                         <h4>${Math.round(forecastDay.temp.max)}° / ${Math.round(forecastDay.temp.min)}°</h4>
                     </div>
                 </div>
